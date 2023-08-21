@@ -801,6 +801,7 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
         [self setupPipController];
         
         if (self.frame != nil && !CGRectIsEmpty(*(self.frame))) {
+            [BetterPlayerLogger log:[NSString stringWithFormat:@"self.frame = %@", NSStringFromCGRect(*self.frame)] method:@"usePlayerLayer"];
             [self setPictureInPictureOverlayRect:*(self.frame)];
         }
         
